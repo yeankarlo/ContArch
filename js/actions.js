@@ -7,7 +7,6 @@ $(document).ready(function(e) {
 			var tel = $('#cTel').val();
 			var mov = $('#cMov').val();
 			var mail = $('#cMail').val();
-		
 			// ------crear el objeto de contacto para llenarlo con los datos
 			var nueCont = navigator.contacts.create();
 			nueCont.displayname = nom;
@@ -27,7 +26,7 @@ $(document).ready(function(e) {
 			nueCont.emails = correos;
 			// ------guardar el contacto
 			nueCont.save(function(){
-				$('#cNom,#cTel,#cMov,#cMail').val();
+				$('#cNom,#cTel,#cMov,#cMail').val('');
 				navigator.notification.alert('Creado satisfactoriamente', function(){
 						history.back();
 					},'Contacto OK', 'Aceptar');
